@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import productos from "../data/productos";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase/config";
 import ItemList from "./ItemList";
 
 function ItemListContainer() {
@@ -10,27 +11,36 @@ function ItemListContainer() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
+    const getProductos = async () => {
+      setLoading(true);
 
-    const getProductos = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(productos);
-      }, 1000);
-    });
+      try {
+        const productosRef = collection(db, "products");
 
-    getProductos.then((res) => {
-      if (categoryId) {
-        const productosFiltrados = res.filter(
-          (producto) => producto.categoria === categoryId
-        );
+        const snapshot = await getDocs(productosRef);
 
-        setItems(productosFiltrados);
-      } else {
-        setItems(res);
+        const productos = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        if (categoryId) {
+          setItems(
+            productos.filter(
+              (producto) => producto.categoria === categoryId
+            )
+          );
+        } else {
+          setItems(productos);
+        }
+      } catch (error) {
+        console.error("Error al obtener productos:", error);
+      } finally {
+        setLoading(false);
       }
+    };
 
-      setLoading(false);
-    });
+    getProductos();
   }, [categoryId]);
 
   if (loading) {

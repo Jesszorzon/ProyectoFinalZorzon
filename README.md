@@ -1,16 +1,84 @@
-# React + Vite
+# 🛒 MINIMARKET
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto Final del curso **React JS** de Coderhouse.
 
-Currently, two official plugins are available:
+MINIMARKET es una aplicación de e-commerce desarrollada con React que permite visualizar productos, filtrarlos por categorías, consultar el detalle de cada uno, agregarlos al carrito y finalizar una compra almacenando la orden en Firebase Firestore.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- React Router DOM
+- Context API
+- Firebase
+- Cloud Firestore
+- CSS
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Funcionalidades
+
+- Visualización de productos.
+- Filtrado por categorías.
+- Detalle de cada producto.
+- Selector de cantidad (ItemCount).
+- Carrito de compras.
+- Agregar y eliminar productos.
+- Vaciar carrito.
+- Checkout.
+- Generación de órdenes de compra.
+- Almacenamiento de órdenes en Firebase.
+- Actualización automática del stock.
+
+---
+
+## 📂 Estructura del proyecto
+
+```
+src
+│
+├── components
+├── context
+├── firebase
+├── App.jsx
+├── main.jsx
+└── App.css
+```
+
+---
+
+## ⚙️ Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone URL_DEL_REPOSITORIO
+```
+
+Ingresar a la carpeta:
+
+```bash
+cd NavegaLasRutasZorzon
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Ejecutar el proyecto:
+
+```bash
+npm run dev
+```
+
+---
+
+## 👩‍💻 Autora
+
+Jesica Zorzon
+
+Proyecto realizado para el curso de **React JS - Coderhouse**.

@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import Cart from "./components/Cart";
+import CheckoutForm from "./components/CheckoutForm";
 import "./App.css";
 
 function App() {
@@ -10,17 +12,9 @@ function App() {
       <Navbar />
 
       <div className="hero">
-        <img
-          src="/logo.jpeg"
-          alt="MINIMARKET"
-          className="logoPrincipal"
-        />
-
         <h1>MINIMARKET</h1>
 
-        <p>
-          Todo lo que necesitás, en un solo lugar.
-        </p>
+        <p>Todo lo que necesitás, en un solo lugar.</p>
       </div>
 
       <Routes>
@@ -37,6 +31,16 @@ function App() {
         <Route
           path="/item/:itemId"
           element={<ItemDetailContainer />}
+        />
+
+        <Route
+          path="/cart"
+          element={<Cart />}
+        />
+
+        <Route
+          path="/checkout"
+          element={<CheckoutForm />}
         />
 
         <Route
