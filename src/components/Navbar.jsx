@@ -1,26 +1,57 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="logoMarca">
-        <Link to="/">
+        <NavLink to="/">
           <img
             src="/logo.jpeg"
             alt="Minimarket"
             className="logoNavbar"
           />
-        </Link>
+        </NavLink>
 
         <h2>MINIMARKET</h2>
       </div>
 
       <div className="menu">
-        <Link to="/">Inicio</Link>
-        <Link to="/category/almacen">Almacén</Link>
-        <Link to="/category/bebidas">Bebidas</Link>
-        <Link to="/category/limpieza">Limpieza</Link>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "activeLink" : ""
+          }
+        >
+          Inicio
+        </NavLink>
+
+        <NavLink
+          to="/category/almacen"
+          className={({ isActive }) =>
+            isActive ? "activeLink" : ""
+          }
+        >
+          Almacén
+        </NavLink>
+
+        <NavLink
+          to="/category/bebidas"
+          className={({ isActive }) =>
+            isActive ? "activeLink" : ""
+          }
+        >
+          Bebidas
+        </NavLink>
+
+        <NavLink
+          to="/category/limpieza"
+          className={({ isActive }) =>
+            isActive ? "activeLink" : ""
+          }
+        >
+          Limpieza
+        </NavLink>
       </div>
 
       <CartWidget />

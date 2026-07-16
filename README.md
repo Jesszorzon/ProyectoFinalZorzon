@@ -1,66 +1,54 @@
-# 🛒 MINIMARKET
+# MINIMARKET
 
-Proyecto Final del curso **React JS** de Coderhouse.
-
-MINIMARKET es una aplicación de e-commerce desarrollada con React que permite visualizar productos, filtrarlos por categorías, consultar el detalle de cada uno, agregarlos al carrito y finalizar una compra almacenando la orden en Firebase Firestore.
+Proyecto Final de React JS desarrollado utilizando React, React Router DOM, Context API y Firebase Firestore.
 
 ---
 
-## 🚀 Tecnologías utilizadas
+# Descripción
 
-- React 19
-- Vite
+MINIMARKET es una aplicación web de e-commerce que permite a los usuarios navegar por un catálogo de productos, filtrarlos por categorías, visualizar el detalle de cada producto, agregarlos al carrito de compras y finalizar una compra registrando la orden en Firebase Firestore.
+
+---
+
+# Tecnologías utilizadas
+
+- React
 - React Router DOM
+- Firebase Firestore
 - Context API
-- Firebase
-- Cloud Firestore
-- CSS
+- Vite
+- CSS3
 
 ---
 
-## 📌 Funcionalidades
+# Funcionalidades
 
-- Visualización de productos.
-- Filtrado por categorías.
-- Detalle de cada producto.
-- Selector de cantidad (ItemCount).
-- Carrito de compras.
-- Agregar y eliminar productos.
-- Vaciar carrito.
-- Checkout.
-- Generación de órdenes de compra.
-- Almacenamiento de órdenes en Firebase.
-- Actualización automática del stock.
-
----
-
-## 📂 Estructura del proyecto
-
-```
-src
-│
-├── components
-├── context
-├── firebase
-├── App.jsx
-├── main.jsx
-└── App.css
-```
+- Visualización dinámica de productos desde Firebase Firestore.
+- Filtrado de productos por categorías.
+- Detalle individual de cada producto.
+- Selector de cantidad mediante ItemCount.
+- Carrito de compras utilizando Context API.
+- Eliminación individual de productos del carrito.
+- Vaciado completo del carrito.
+- Checkout para finalizar la compra.
+- Generación de órdenes de compra en Firebase Firestore.
+- Actualización automática del stock luego de confirmar la compra.
+- Navegación SPA mediante React Router DOM.
 
 ---
 
-## ⚙️ Instalación
+# Instalación
 
 Clonar el repositorio:
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone https://github.com/Jesszorzon/ProyectoFinalZorzon.git
 ```
 
-Ingresar a la carpeta:
+Ingresar a la carpeta del proyecto:
 
 ```bash
-cd NavegaLasRutasZorzon
+cd ProyectoFinalZorzon
 ```
 
 Instalar dependencias:
@@ -77,8 +65,92 @@ npm run dev
 
 ---
 
-## 👩‍💻 Autora
+# Configuración de Firebase
 
-Jesica Zorzon
+La aplicación utiliza Firebase Firestore como base de datos.
 
-Proyecto realizado para el curso de **React JS - Coderhouse**.
+Para ejecutar el proyecto desde cero es necesario:
+
+- Crear un proyecto en Firebase.
+- Crear una base de datos Cloud Firestore.
+- Configurar el archivo:
+
+```
+src/firebase/config.js
+```
+
+con las credenciales del nuevo proyecto.
+
+Luego crear la colección:
+
+```
+products
+```
+
+con los productos correspondientes.
+
+---
+
+# Estructura del proyecto
+
+```
+src
+│
+├── components
+├── context
+├── firebase
+├── services
+├── App.jsx
+└── main.jsx
+
+public
+│
+├── logo.jpeg
+└── productos
+```
+
+---
+
+# Funcionalidades implementadas
+
+✔ Catálogo de productos.
+
+✔ Filtrado por categorías.
+
+✔ Detalle del producto.
+
+✔ Carrito de compras.
+
+✔ Context API.
+
+✔ Checkout.
+
+✔ Generación de órdenes.
+
+✔ Actualización automática del stock.
+
+✔ Firebase Firestore.
+
+✔ React Router DOM.
+
+---
+
+# Deploy
+
+https://navega-las-rutas-zorzon.vercel.app/
+
+---
+
+# Repositorio
+
+https://github.com/Jesszorzon/ProyectoFinalZorzon
+
+---
+
+# Autora
+
+**Jesica Zorzon**
+
+Proyecto Final - React JS
+
+Coderhouse

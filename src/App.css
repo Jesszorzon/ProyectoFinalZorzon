@@ -184,3 +184,9 @@ body {
 .detalleProducto button:hover {
   background: #e5ac00;
 }
+
+.activeLink {
+  color: #1e88e5;
+  font-weight: bold;
+  text-decoration: underline;
+}
